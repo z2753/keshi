@@ -1,0 +1,32 @@
+
+material Lightning_BoltB
+{
+	technique
+	{
+		pass
+		{
+			  vertex_program_ref Basic_Coloured_Texture_VP {}
+			fragment_program_ref Basic_Texture_FP { param_named colour float4 5 5 5 1 }
+			
+			
+			
+			lighting off
+			scene_blend add
+				depth_check on
+			depth_write off
+
+			texture_unit Lightning_BoltB.png
+			{
+				texture_alias Lightning_BoltB.png
+				texture Lightning_BoltB.png
+						tex_address_mode clamp
+			}
+			
+							texture_unit interiorMask {
+				content_type compositor rt_interiormask
+			}
+		}
+
+	}
+
+}

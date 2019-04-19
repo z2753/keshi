@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Editor>
+ <Config gender="Male">
+  <Category name="Face">
+   <Range max="110" min="90" name="Head size" random_variation="10"/>
+   <Range max="110" min="90" name="Head shape"/>
+   <Range max="150" min="65" mid="100" name="Neck"/>
+   <Range max="150" min="70"  mid="100" name="Neck width"/>
+   <Range max="110" min="90" name="Neck length"/>
+   <Range max="120" min="85"  mid="100" name="Jaw"/>
+   <Range target="wide_cheekbones" target_opposite="narrow_cheekbones" min="-150"  mid="0" max="100" name="Cheekbones"/>
+   <Range target="big_mouth" min="-100" max="120" name="Mouth size"/>
+   <Range target="wide_mouth" min="-130" max="150" name="Mouth width"/>
+   <Range target="wide_nose" min="-60" max="120" name="Nose width"/>
+   <Range target="long_nose" min="-65" max="100" name="Nose length"/>
+   <Range target="arch_nose" min="-130" max="135" name="Nose arch"/>
+   <Range target="high_nose" min="-165" max="165" name="Nose position"/>
+   <Range target="tiltup_nose" target_opposite="tiltdown_nose" min="-200" max="200" name="Nose tilt"/>
+   <Range target="high_brow" target_opposite="low_brow" min="-200" max="200" name="Brow position"/>
+   <Range target="tiltdown_brow" target_opposite="tiltup_brow" min="-200" max="200" name="Brow tilt"/>
+   <Range target="shallow_eyes" min="-180" max="180" name="Eyes depth"/>
+   <Range target="narrow_eyes" min="-100" max="100" name="Eyes narrow"/>
+   <Range target="close_eyes" min="-170" max="130" name="Eyes closeness"/>
+   <Range target="tiltup_eyes" target_opposite="tiltdown_eyes" min="-100" max="100" name="Eyes tilt"/>
+   <Range target="high_eyes" min="-150" max="100" name="Eyes height"/>
+   <Range target="big_eyes" min="0" max="100" name="Eyes size"/>
+   <Range target="overbite" target_opposite="underbite" min="-100" max="100" name="Chin depth"/>
+  </Category>
+  <Category name="Body">
+   <Range max="120" min="80" name="Height" random_group="0"/>
+   <Range max="120" min="80" name="Frame"/>
+   <Range max="70" min="0" name="Posture"/>
+   <Range max="90" min="45" name="Shoulder set"/>
+   <Range max="80" min="25" name="Neck position"/>
+   <Range max="115" min="85" name="Leg length" random_group="0"/>
+   <Range max="110" min="90" name="Shoulders" random_group="1"/>
+   <Range max="145" min="60" name="Arm bulk"/>
+   <Range max="120" min="80" name="Hands" random_group="0"/>
+   <Range max="180" min="55"  mid="100" name="Chest" random_group="1"/>
+   <Range max="200" min="70"  mid="100" name="Stomach"/>
+   <Range max="155" min="35"  mid="100" name="Waist" random_group="1"/>
+   <Range max="145" min="75"  mid="100" name="Hips" random_group="1"/>
+   <Range max="140" min="60"  mid="100" name="Legs bulk"/>
+   <Range max="115" min="85"  mid="100" name="Legs shape"/>
+   <Range max="120" min="80" name="Feet"/>
+   <ColourRange name="Skin Tone">
+      <Colour r="255" g="255" b="255" />
+      <Colour r="251" g="219" b="219" />
+      <Colour r="201" g="190" b="180" />
+      <Colour r="137" g="119" b="102" />
+      <Colour r="97" g="73" b="61" />
+      <Colour r="67" g="64" b="69" />
+   </ColourRange>
+  </Category>
+ </Config>
+ 
+ <Config gender="Female">
+  <Category name="Face">
+   <Range max="110" min="90" name="Head size"/>
+   <Range max="110" min="90" name="Head shape"/>
+   <Range max="150" min="50" name="Neck"/>
+   <Range max="200" min="50"  mid="100" name="Neck width"/>
+   <Range max="115" min="85" name="Neck length"/>
+  <Range target="wide_cheekbones" target_opposite="narrow_cheekbones" min="-100" max="100" name="Cheekbones"/>
+  <Range target="wide_cheeks" min="-100" max="100" name="Cheeks"/>
+  <Range target="big_mouth" min="-100" max="100" name="Mouth size"/>
+   <Range target="wide_mouth" min="-100" max="100" name="Mouth width"/>
+   <Range target="wide_nose" min="-100" max="100" name="Nose width"/>
+   <Range target="long_nose" min="-100" max="100" name="Nose length"/>
+   <Range target="arch_nose" min="-100" max="100" name="Nose arch"/>
+   <Range target="high_nose" min="-100" max="100" name="Nose position"/>
+   <Range target="tiltup_nose" target_opposite="tiltdown_nose" min="-100" max="100" name="Nose tilt"/>
+   <Range target="high_brows" target_opposite="low_brows" min="-100" max="100" name="Brow position"/>
+   <Range target="tiltdown_brow" target_opposite="tiltup_brow" min="-100" max="100" name="Brow tilt"/>
+   <Range target="shallow_eyes" min="-100" max="100" name="Eyes depth"/>
+   <Range target="narrow_eyes" min="-100" max="100" name="Eyes narrow"/>
+   <Range target="close_eyes" min="-100" max="100" name="Eyes closeness"/>
+   <Range target="tiltup_eyes" target_opposite="tiltdown_eyes" min="-100" max="100" name="Eyes tilt"/>
+   <Range target="high_eyes" min="-100" max="100" name="Eyes height"/>
+   <Range target="big_eyes" min="-100" max="100" name="Eyes size"/>
+   <Range target="wide_jaw" target_opposite="narrow_jaw" min="-100" max="100" name="Jaw"/>
+   <Range target="underbite" target_opposite="overbite" min="-100" max="100" name="Chin depth"/>
+   <Range target="down_chin" target_opposite="up_chin" min="-100" max="100" name="Chin height"/>
+   <Range target="wide_chin" min="-100" max="100" name="Chin width"/>
+   <Range target="jrpg_base" min="-100" max="100" name="JRPG base"/>
+   <Range target="close_brows" min="-100" max="100" name="close_brows"/>
+   <Range target="outside_brows" min="-100" max="100" name="outside_brows"/>
+   <Range target="big_pupil" target_opposite="small_pupil" min="-100" max="100" name="pupil_size"/>
+   <Range target="up_pupil" target_opposite="down_pupil" min="-100" max="100" name="updown_pupil"/>
+   <Range target="hight_pupil" min="-200" max="200" name="hight_pupil"/>
+   <Range target="inout_pupil" min="-100" max="100" name="inout_pupil"/>
+   <Range target="upper_eyelid" min="-200" max="200" name="upper_eyelid"/>
+   <Range target="lower_eyelid" min="-100" max="100" name="lower_eyelid"/>
+   <Range target="updown_eyes" min="-100" max="100" name="updown_eyes"/>
+   <Range target="slope_eyes" min="-130" max="130" name="slope_eyes"/>
+   <Range target="width_eyes" min="-100" max="100" name="width_eyes"/>
+   <Range target="hight_eyes" min="-150" max="150" name="hight_eyes"/>
+   <Range target="hanme" min="-100" max="100" name="hanme"/>
+   <Range target="mouth_angle" target_opposite="mouth_angle2" min="-100" max="100" name="mouth_angle"/>
+   <Range target="mouth_down" target_opposite="mouth_up" min="-100" max="100" name="mouth_updown"/>
+   <Range target="width_face" min="-100" max="100" name="width_face"/>
+   <Range target="width_face2" min="-100" max="100" name="width_face2"/>
+   <Range target="face_line" min="-100" max="100" name="face_line"/>
+   <Range target="default_morph" min="-100" max="100" name="default_morph"/>
+  </Category>
+  <Category name="Body">
+	<Range max="120" min="80" name="Height"/>
+	<Range max="120" min="80" name="Frame"/>
+	<Range max="70" min="0" name="Posture"/>
+	<Range max="90" min="45" name="Shoulder set"/>
+	<Range max="80" min="25" name="Neck position"/>
+	<Range max="130" min="80"  mid="100" name="Leg length"/>
+	<Range max="110" min="90" name="Shoulders"/>
+	<Range max="120" min="60"  mid="100" name="Arm bulk"/>
+	<Range max="120" min="80" name="Hands"/>
+	<Range max="180" min="55"  mid="100" name="Chest"/>
+		<Range max="150" min="25"  mid="85" name="Breast size"/>
+		<Range max="140" min="0"  mid="100" name="Breast height"/>
+		<Range max="125" min="50"  mid="100" name="Breast spacing"/>
+	  <Range max="200" min="60"  mid="100" name="Stomach"/>
+	  <Range max="155" min="15"  mid="100" name="Waist"/>
+	  <Range max="145" min="75"  mid="100" name="Hips"/>
+	  <Range max="100" min="60"  mid="100" name="Legs bulk"/>
+	  <Range max="115" min="85"  mid="100" name="Legs shape"/>
+	  <Range max="120" min="80" name="Feet"/>
+   <ColourRange name="Skin Tone">
+      <Colour r="255" g="255" b="255" />
+      <Colour r="251" g="219" b="219" />
+      <Colour r="201" g="190" b="180" />
+      <Colour r="137" g="119" b="102" />
+      <Colour r="97" g="73" b="61" />
+      <Colour r="67" g="64" b="69" />
+   </ColourRange>
+  </Category>
+ </Config>
+</Editor>

@@ -1,0 +1,108 @@
+system kenshi_choking_clouds1_large
+{
+    category                                    kenshi_particles
+    technique dust_clouds
+    {
+        visual_particle_quota                   150
+        material                                kenshi_smoke1
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+            billboard_rotation_type             vertex
+        }
+        emitter                                 Circle dust_cloud1
+        {
+            emission_rate                       15
+            angle                               180
+            time_to_live                        dyn_random
+            {
+                min                             3
+                max                             5
+            }
+            velocity                            dyn_random
+            {
+                min                             1
+                max                             5
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             150
+                max                             350
+            }
+            start_colour_range                  1 1 1 1
+            colour                              0 0 0 0
+            radius                              550
+        }
+        emitter                                 Circle dust_cloud2
+        {
+            emission_rate                       20
+            angle                               180
+            time_to_live                        dyn_random
+            {
+                min                             3
+                max                             5
+            }
+            velocity                            dyn_random
+            {
+                min                             1
+                max                             5
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             750
+                max                             1000
+            }
+            start_colour_range                  1 1 1 1
+            colour                              0 0 0 0
+        }
+        emitter                                 SphereSurface dust_cloud3
+        {
+            emission_rate                       20
+            angle                               180
+            time_to_live                        dyn_random
+            {
+                min                             3
+                max                             5
+            }
+            velocity                            dyn_random
+            {
+                min                             1
+                max                             5
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             750
+                max                             1000
+            }
+            start_colour_range                  1 1 1 1
+            colour                              0 0 0 0
+            radius                              500
+        }
+        affector                                Colour Affector27
+        {
+            time_colour                         0    0.12549 0.12549 0.12549 0
+            time_colour                         0.658696  0.0705882 0.0705882 0.0705882 0.54902
+            time_colour                         1    0.145098 0.145098 0.145098 0.0156863
+            colour_operation                    multiply
+        }
+        affector                                Scale Affector28
+        {
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0 0.556787
+                control_point                   1 61.4792
+            }
+        }
+        affector                                TextureRotator Affector3
+        {
+            rotation                            dyn_random
+            {
+                min                             0
+                max                             360
+            }
+            rotation_speed                      0
+        }
+    }
+}

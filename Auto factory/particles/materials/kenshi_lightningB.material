@@ -1,0 +1,24 @@
+
+material kenshi_lightningB
+{
+	technique
+	{
+		pass
+		{
+	    	vertex_program_ref Basic_Coloured_Texture_VP {}
+			fragment_program_ref Basic_Texture_FP {}
+
+			lighting off
+			scene_blend add
+			depth_write off
+
+			texture_unit lightningB.dds
+			{
+				texture_alias lightningB.dds
+				texture lightningB.dds
+			}
+		}
+
+	}
+
+}

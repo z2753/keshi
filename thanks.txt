@@ -1,0 +1,70 @@
+这个MOD做到现在这么长时间， 得到了很多朋友的帮助，并在此对他们表示由衷的感激！
+
+以下是不完整名单:
+3dm论坛 小小的娃娃-Love 感谢给予很中肯的建议
+3dm论坛 quakewzq 积极参与测试并很及时的给予很多BUG反馈与建议
+3dm论坛 蝴蝶·效应 给予了非常大的帮助，不但提供各种建议还提供了很多的MOD想法，思路与参考MOD
+3dm论坛 lph111111 感谢不但积极参与测试而且反馈了很多BUG, 帮助很大
+3dm论坛 隐风 给予了非常大的帮助, 从整体MOD思路包括平衡性包括游戏性都给予很大的帮助, 非常感谢
+3dm论坛 wwdhk21 感谢及时反馈了很多的BUG
+3dm论坛 madwac 感谢花了很长时间测试MOD， 并且给出了非常宝贵的反馈建议
+3dm论坛 两个人听 给予非常大的帮助， 从整体思路以及如何做平衡性上给与了很中肯和食用的建议
+3dm论坛 alisram 给予非常大的帮助， 从整体思路以及如何做平衡性上给与了很中肯和食用的建议
+3dm论坛 fox790309 感谢积极测试并反馈问题
+3dm论坛 dsxykl 感谢积极测试并反馈了不少问题
+3dm论坛 ly19910707 感谢积极测试并反馈问题
+3dm论坛 alisram 感谢积极参与测试，并且反馈了不少问题
+3dm论坛 54546792 感谢参与测试， 并且给出了很好的思路，帮助很大
+百度贴吧 istarbear 感谢积极参与测试，并且反馈了很有价值的问题和思路， 帮助很大
+百度贴吧 Blazzard213 感谢积极参与并且反馈了很有价值的问题
+百度贴吧 
+
+
+参与测试并积极反馈的朋友:
+3dm论坛 13732090205
+3dm论坛 dsagwertgewa
+3dm论坛 pal1234bob
+3dm论坛 as8469125
+3dm论坛 ashfalanuo
+3dm论坛 clx01128
+3dm论坛 微型貓科動物
+3dm论坛 babyandy
+3dm论坛 _钱
+3dm论坛 OK绷king
+3dm论坛 蜗牛~爬啊爬~
+3dm论坛 uo8889
+3dm论坛 guiguzhi
+3dm论坛 zzz八个人
+3dm论坛 磷酸氢钾
+百度贴吧 风儿喃
+百度贴吧 agustou
+百度贴吧 TanShuiGroup
+百度贴吧 花一更
+百度贴吧 koit717
+百度贴吧 诺儿晨曦
+百度贴吧 落寞丨褐瞳
+百度贴吧 诗灬灬灬
+
+
+
+
+
+特别感谢:
+3dm论坛 zgxjwlmqpzj 提供,制作, 修改3D模型 
+
+
+感谢他们积极参与测试并反馈
+
+
+另外本MOD中的部分素材以及脚本取自于以下的MOD， 对这些MOD作者深表感谢！
+Shopping - Let the Cats out of the Bag 让NPC更多购买东西JRPG 美型种族MOD
+Dangerous Hazards 更严酷的气候JRPG 美型种族HK Droid Races (Star Wars: KotOR) 
+Recruit ANYONE v1 招募任何人
+Tame Beasties 招募动物
+Player slave 玩家奴隶AI
+MW_Fu2 HairstylesZombie LandPower up battle by skill 动作mod
+More Combat Animation (WIP) 动作mod
+Military craft (New attacking moves) 动作modNPC Town Guard Mission 城镇保卫任务
+Escort Mission 护送保镖任务
+zombie land 僵尸 大 陆The LightsaberLively_Player_Town_AI 
+人力发电机

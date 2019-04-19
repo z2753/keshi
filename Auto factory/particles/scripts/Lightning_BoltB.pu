@@ -1,0 +1,250 @@
+system Lightning_BoltB
+{
+    scale                                       50 200 50
+    technique lightningbolt
+    {
+        visual_particle_quota                   2
+        emitted_emitter_quota                   1
+        emitted_technique_quota                 2
+        emitted_affector_quota                  1
+        emitted_system_quota                    2
+        material                                Lightning_BoltB
+        default_particle_width                  10
+        default_particle_height                 10
+        default_particle_depth                  10
+        renderer                                Billboard
+        {
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       2
+            time_to_live                        1.2
+            velocity                            0
+            duration                            1
+            direction                           0 0 0
+        }
+        affector                                Colour Affector3
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.00217391  1 1 1 1
+            time_colour                         0.117391  1 1 1 1
+            time_colour                         0.119565  0 0 0 0
+            time_colour                         0.186957  0 0 0 0
+            time_colour                         0.18913  1 1 1 1
+            time_colour                         0.293478  1 1 1 1
+            time_colour                         0.308696  1 1 1 1
+            time_colour                         0.31087  0 0 0 0
+            time_colour                         0.484783  0 0 0 0
+            time_colour                         0.486957  1 1 1 1
+            time_colour                         0.852174  1 1 1 1
+            time_colour                         0.854348  0 0 0 0
+            time_colour                         1    0 0 0 0
+            colour_operation                    multiply
+        }
+        affector                                Scale Affector4
+        {
+            enabled                             false
+            xyz_scale                           30
+        }
+        affector                                Scale Affector5
+        {
+            x_scale                             dyn_random
+            {
+                min                             -1
+                max                             1
+            }
+            y_scale                             dyn_random
+            {
+                min                             0
+                max                             0
+            }
+            z_scale                             dyn_random
+            {
+                min                             0
+                max                             0
+            }
+        }
+    }
+    technique lightningbolt2
+    {
+        visual_particle_quota                   2
+        emitted_emitter_quota                   1
+        emitted_technique_quota                 2
+        emitted_affector_quota                  1
+        emitted_system_quota                    2
+        material                                Lightning_Bolt2B
+        default_particle_width                  10
+        default_particle_height                 10
+        default_particle_depth                  10
+        renderer                                Billboard
+        {
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       2
+            time_to_live                        1.2
+            velocity                            0
+            duration                            1
+        }
+        affector                                Scale Affector4
+        {
+            enabled                             false
+            xyz_scale                           30
+        }
+        affector                                Scale Affector5
+        {
+            x_scale                             dyn_random
+            {
+                min                             -1
+                max                             1
+            }
+            y_scale                             dyn_random
+            {
+                min                             0
+                max                             0
+            }
+            z_scale                             dyn_random
+            {
+                min                             0
+                max                             0
+            }
+        }
+        affector                                Colour Affector3
+        {
+            time_colour                         0.0925926  0 0 0 0
+            time_colour                         0.100529  1 1 1 1
+            time_colour                         0.169312  1 1 1 1
+            time_colour                         0.171958  0 0 0 0
+            time_colour                         0.280423  0 0 0 0
+            time_colour                         0.285714  1 1 1 1
+            time_colour                         0.428571  1 1 1 1
+            time_colour                         0.431217  0 0 0 0
+            time_colour                         0.814815  0 0 0 0
+            time_colour                         0.820106  1 1 1 1
+            time_colour                         0.981481  1 1 1 1
+            time_colour                         1    0 0 0 0
+            colour_operation                    multiply
+        }
+    }
+    technique SPARKS
+    {
+        position                                -0.4 -1 0
+        visual_particle_quota                   900
+        emitted_emitter_quota                   900
+        emitted_technique_quota                 200
+        emitted_affector_quota                  200
+        emitted_system_quota                    200
+        material                                SparkB
+        default_particle_width                  0.1
+        default_particle_height                 0.025
+        default_particle_depth                  0.1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Circle 
+        {
+            emission_rate                       dyn_random
+            {
+                min                             642
+                max                             1730
+            }
+            time_to_live                        dyn_random
+            {
+                min                             0.4
+                max                             5
+            }
+            mass                                4
+            velocity                            dyn_random
+            {
+                min                             85
+                max                             400
+            }
+            duration                            dyn_random
+            {
+                min                             0.02
+                max                             0.5
+            }
+            direction                           0 4 0
+            radius                              0.02
+        }
+        affector                                Gravity 
+        {
+            gravity                             12
+        }
+        affector                                LinearForce 
+        {
+            force_vector                        0 -90 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.362434  0 0 0 0
+            time_colour                         0.391534  1 1 1 1
+            colour_operation                    multiply
+        }
+        observer                                OnEmission 
+        {
+            observe_particle_type               emitter_particle
+            observe_interval                    1
+            observe_until_event                 true
+        }
+        observer                                OnTime 
+        {
+            observe_interval                    1
+            observe_until_event                 true
+            on_time                             greater_than 1
+        }
+    }
+    technique Flames
+    {
+        position                                -0.4 0 0
+        material                                Flame1
+        default_particle_width                  0.2
+        default_particle_height                 0.2
+        default_particle_depth                  0.2
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Circle 
+        {
+            emission_rate                       100
+            time_to_live                        1.2
+            velocity                            12
+            duration                            0.4
+            position                            0 -0.3 0
+            radius                              0.3
+        }
+        affector                                TextureRotator 
+        {
+            rotation_speed                      dyn_oscillate
+            {
+                oscillate_frequency             2
+                oscillate_phase                 8
+                oscillate_base                  0
+                oscillate_amplitude             0
+                oscillate_type                  square
+            }
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.100529  0.984314 0.87451 0.717647 0.796078
+            time_colour                         0.322751  0.639216 0.380392 0.305882 0.556863
+            time_colour                         0.600529  0 0 0 0
+            time_colour                         1    0 0 0 0
+        }
+        affector                                Scale 
+        {
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0 -4.6
+                control_point                   0.193877 5.5625
+                control_point                   0.366942 5.17969
+                control_point                   0.453345 -23.6484
+                control_point                   0.653883 -23.6543
+            }
+        }
+    }
+}

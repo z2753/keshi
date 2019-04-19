@@ -1,0 +1,26 @@
+
+material SparkB
+{
+	technique
+	{
+		pass
+		{
+												vertex_program_ref Basic_Coloured_Texture_VP {}
+			fragment_program_ref Basic_Texture_FP {}
+			
+						lighting off
+			scene_blend add
+			depth_check on
+			depth_write off
+
+			texture_unit SparkB.png
+			{
+				texture_alias SparkB.png
+				texture SparkB.png
+											  tex_address_mode clamp
+			}
+		}
+
+	}
+
+}
