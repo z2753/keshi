@@ -1,0 +1,78 @@
+system kenshi_sparks
+{
+    scale                                       0.5 0.5 0.5
+    category                                    kenshi_particles
+    technique sparks
+    {
+        material                                kenshi_dustparticle2
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point spark_particle
+        {
+            emission_rate                       1
+            angle                               180
+            time_to_live                        dyn_random
+            {
+                min                             0.05
+                max                             0.2
+            }
+            velocity                            dyn_random
+            {
+                min                             20
+                max                             35
+            }
+            duration                            10
+            repeat_delay                        2
+            all_particle_dimensions             0.6
+            start_colour_range                  1 1 1 1
+            end_colour_range                    0.854902 0.470588 0.211765 1
+            colour                              1 0.501961 0 1
+            force_emission                      true
+        }
+        affector                                Colour Affector5
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.042328  0.984314 0.14902 0.00392157 0.431373
+            time_colour                         0.103175  0.996078 0.803922 0.219608 1
+            time_colour                         0.134921  0.998918 0.945909 0.784719 1
+            time_colour                         0.179894  1 0.956863 0.866667 1
+            time_colour                         0.42328  1 0.94902 0.756863 1
+            time_colour                         0.52381  0.996078 0.772549 0.00392157 1
+            time_colour                         0.756614  0.992157 0.254902 0.00784314 0.431373
+            time_colour                         0.888889  0.529412 0 0 0.117647
+            time_colour                         1    0 0 0 0
+        }
+        affector                                LinearForce Affector41
+        {
+            force_vector                        0 -50 0
+        }
+        affector                                Scale 
+        {
+            enabled                             false
+            xyz_scale                           dyn_random
+            {
+                min                             0.3
+                max                             0.7
+            }
+        }
+        affector                                TextureRotator 
+        {
+            rotation_speed                      dyn_random
+            {
+                min                             17
+                max                             42
+            }
+        }
+        observer                                OnClear 
+        {
+            observe_interval                    0.2
+            handler                             DoStopSystem 
+            {
+            }
+        }
+    }
+}

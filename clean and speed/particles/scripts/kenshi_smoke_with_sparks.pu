@@ -1,0 +1,124 @@
+system kenshi_smoke_with_sparks
+{
+    category                                    kenshi_particles
+    technique sparks
+    {
+        material                                kenshi_dustparticle1
+        default_particle_width                  0.1
+        default_particle_height                 0.1
+        default_particle_depth                  0.1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point spark_particle
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            angle                               180
+            time_to_live                        dyn_random
+            {
+                min                             0.3
+                max                             1
+            }
+            velocity                            dyn_random
+            {
+                min                             20
+                max                             60
+            }
+            duration                            dyn_random
+            {
+                min                             0.04
+                max                             0.1
+            }
+            repeat_delay                        dyn_random
+            {
+                min                             0
+                max                             3
+            }
+            all_particle_dimensions             0.6
+            start_colour_range                  1 1 1 1
+            end_colour_range                    0.854902 0.470588 0.211765 1
+            colour                              0.466667 0.839216 0.247059 1
+        }
+        affector                                Colour Affector5
+        {
+            time_colour                         0    0 0 0 1
+            time_colour                         0.0434783  0.54902 0.0784314 0 1
+            time_colour                         0.104348  0.866667 0.337255 0.0784314 1
+            time_colour                         0.167391  1 0.819608 0.211765 1
+            time_colour                         0.265217  1 0.501961 0.247059 1
+            time_colour                         0.61087  0.529412 0.0784314 0 1
+            time_colour                         1    0 0 0 1
+            colour_operation                    multiply
+        }
+    }
+    technique smoke
+    {
+        visual_particle_quota                   1000
+        material                                kenshi_smoke1
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+            billboard_rotation_type             vertex
+        }
+        emitter                                 SphereSurface smoke_cloud
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            angle                               30
+            time_to_live                        dyn_random
+            {
+                min                             3
+                max                             5
+            }
+            velocity                            dyn_random
+            {
+                min                             7
+                max                             15
+            }
+            duration                            3
+            repeat_delay                        1
+            all_particle_dimensions             dyn_random
+            {
+                min                             3
+                max                             10
+            }
+            start_colour_range                  1 1 1 0.0784314
+            end_colour_range                    1 1 1 0.313726
+            colour                              0 0 0 0
+            radius                              5
+        }
+        affector                                Colour Affector27
+        {
+            time_colour                         0    0.211765 0.211765 0.211765 0
+            time_colour                         0.0826087  0.156863 0.156863 0.156863 1
+            time_colour                         1    0.211765 0.211765 0.211765 0.0156863
+            colour_operation                    multiply
+        }
+        affector                                Scale Affector28
+        {
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0 0.556787
+                control_point                   1 12.6759
+            }
+        }
+        affector                                TextureRotator Affector3
+        {
+            rotation                            dyn_random
+            {
+                min                             0
+                max                             360
+            }
+            rotation_speed                      0
+        }
+    }
+}

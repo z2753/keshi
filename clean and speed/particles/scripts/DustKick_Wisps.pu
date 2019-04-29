@@ -1,0 +1,113 @@
+system Dustkick_wisps
+{
+    scale_velocity                              0.5
+    scale                                       50 50 12.5
+    category                                    General
+    technique 
+    {
+        position                                0 1 0
+        visual_particle_quota                   70
+        emitted_emitter_quota                   70
+        emitted_technique_quota                 70
+        emitted_affector_quota                  70
+        emitted_system_quota                    70
+        material                                Long-wisp
+        default_particle_width                  4
+        default_particle_height                 25
+        default_particle_depth                  3
+        renderer                                Billboard
+        {
+            billboard_origin                    top_center
+            common_direction                    0 2 0
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            angle                               0
+            time_to_live                        dyn_random
+            {
+                min                             2
+                max                             11
+            }
+            velocity                            dyn_random
+            {
+                min                             19
+                max                             36
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             2
+                max                             5
+            }
+            particle_width                      1
+            particle_height                     dyn_random
+            {
+                min                             0.1
+                max                             2
+            }
+            position                            0 2 0
+            direction                           18 0 0
+            orientation                         0 0 0 0
+            start_orientation_range             0 0 0 0
+            end_orientation_range               0 0 0 0
+            box_width                           125
+            box_height                          1
+            box_depth                           125
+        }
+        affector                                Randomiser Affector0
+        {
+            max_deviation_x                     17.4
+            max_deviation_y                     1.1
+            max_deviation_z                     1.1
+        }
+        affector                                Colour Affector1
+        {
+            time_colour                         0    1 1 1 0
+            time_colour                         0.0804348  1 1 1 0
+            time_colour                         0.251323  0.678431 0.576471 0.505882 1
+            time_colour                         0.5  0.737255 0.65098 0.588235 0
+            time_colour                         0.640212  0.654902 0.513726 0.470588 1
+            time_colour                         0.727513  0.67451 0.6 0.584314 1
+            time_colour                         0.893478  1 1 1 0
+            time_colour                         1    1 1 1 0
+        }
+        affector                                Scale Affector3
+        {
+            x_scale                             dyn_curved_linear
+            {
+                control_point                   0.114193 13.8906
+                control_point                   7.84741 0.65625
+                control_point                   13.863 13.6719
+            }
+            y_scale                             dyn_curved_linear
+            {
+                control_point                   0 1.375
+                control_point                   7.47772 -1.80469
+                control_point                   21.5204 2.375
+            }
+            z_scale                             dyn_curved_linear
+            {
+                control_point                   0 3.51172
+                control_point                   6.02862 0.0195313
+                control_point                   13.6367 4.48047
+            }
+        }
+        affector                                TextureRotator 
+        {
+            rotation_speed                      dyn_random
+            {
+                min                             -0.07
+                max                             -0.4
+            }
+        }
+        affector                                Vortex 
+        {
+            rotation_axis                       0 1 0
+            rotation_speed                      -0.1
+        }
+    }
+}

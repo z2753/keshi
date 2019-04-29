@@ -1,0 +1,44 @@
+system kenshi_light_dust_particles1
+{
+    category                                    kenshi_particles
+    technique 
+    {
+        material                                kenshi_dustparticle1
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 SphereSurface 
+        {
+            emission_rate                       1
+            angle                               180
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            velocity                            dyn_random
+            {
+                min                             0.3
+                max                             2
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             0.4
+                max                             0.7
+            }
+            colour                              0.439216 0.439216 0.439216 1
+            radius                              15
+        }
+        affector                                Colour Affector5
+        {
+            time_colour                         0    0 0 0 1
+            time_colour                         0.2  1 1 1 1
+            time_colour                         0.756522  1 1 1 1
+            time_colour                         1    0 0 0 1
+            colour_operation                    multiply
+        }
+    }
+}

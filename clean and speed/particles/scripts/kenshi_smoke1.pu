@@ -1,0 +1,61 @@
+system kenshi_smoke1
+{
+    category                                    kenshi_particles
+    technique 
+    {
+        material                                kenshi_smoke1
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+            billboard_rotation_type             vertex
+        }
+        emitter                                 Point Emitter4
+        {
+            emission_rate                       1
+            time_to_live                        dyn_random
+            {
+                min                             0.3
+                max                             4
+            }
+            velocity                            dyn_random
+            {
+                min                             5
+                max                             15
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             2
+                max                             10
+            }
+            start_colour_range                  0.0588235 0.0588235 0.0588235 0.392157
+            end_colour_range                    0.0588235 0.0588235 0.0588235 0.156863
+            colour                              0 0 0 0
+        }
+        affector                                Colour Affector27
+        {
+            time_colour                         0    1 1 1 0
+            time_colour                         0.458696  1 1 1 1
+            time_colour                         1    1 1 1 0.0156863
+            colour_operation                    multiply
+        }
+        affector                                Scale Affector28
+        {
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0 0.556787
+                control_point                   1 14.5429
+            }
+        }
+        affector                                TextureRotator Affector3
+        {
+            rotation                            dyn_random
+            {
+                min                             0
+                max                             360
+            }
+            rotation_speed                      0
+        }
+    }
+}

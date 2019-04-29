@@ -1,0 +1,194 @@
+system Dustkick01
+{
+    scale                                       0.75 0.75 0.75
+    technique streaks
+    {
+        visual_particle_quota                   8
+        emitted_emitter_quota                   8
+        material                                Dustkick_streak
+        default_particle_height                 1
+        renderer                                Billboard
+        {
+            billboard_type                      oriented_self
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       3
+            angle                               110
+            time_to_live                        dyn_random
+            {
+                min                             0.5
+                max                             1.2
+            }
+            velocity                            0.03
+            particle_width                      dyn_random
+            {
+                min                             0.15
+                max                             0.375
+            }
+            particle_height                     dyn_random
+            {
+                min                             0.04
+                max                             0.1
+            }
+            colour                              0.76 0.7 0.64 1
+            force_emission                      true
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       3
+            angle                               110
+            time_to_live                        dyn_random
+            {
+                min                             0.5
+                max                             1.2
+            }
+            velocity                            0.03
+            particle_width                      dyn_random
+            {
+                min                             0.075
+                max                             0.225
+            }
+            particle_height                     dyn_random
+            {
+                min                             0.01
+                max                             0.07
+            }
+            direction                           0 0.5 0
+            colour                              0.76 0.7 0.64 1
+            force_emission                      true
+        }
+        affector                                Scale 
+        {
+            x_scale                             dyn_curved_linear
+            {
+                control_point                   0 30
+                control_point                   0.2 3
+                control_point                   0.3 0.9
+                control_point                   1 0
+            }
+            y_scale                             dyn_curved_linear
+            {
+                control_point                   0 17.2853
+                control_point                   0.0885609 5.56787
+                control_point                   0.2 3
+                control_point                   1 0.06
+            }
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.2  0.74902 0.74902 0.74902 0.247059
+            time_colour                         0.352174  0.501961 0.501961 0.501961 0.266667
+            time_colour                         1    0 0 0 0
+            colour_operation                    multiply
+        }
+    }
+    technique 
+    {
+        visual_particle_quota                   30
+        material                                stones
+        default_particle_width                  35
+        default_particle_height                 35
+        default_particle_depth                  35
+        renderer                                Billboard
+        {
+            billboard_type                      oriented_self
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            angle                               80
+            time_to_live                        2
+            velocity                            dyn_random
+            {
+                min                             20
+                max                             30
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             0.01
+                max                             0.4
+            }
+            colour                              0.32 0.3 0.2 1
+            force_emission                      true
+        }
+        affector                                LinearForce 
+        {
+            force_vector                        0 -85 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.2  1 1 1 1
+            time_colour                         0.4  1 1 1 1
+            time_colour                         1    1 1 1 0
+            colour_operation                    multiply
+        }
+        affector                                TextureRotator Affector100
+        {
+        }
+    }
+    technique Technique23
+    {
+        visual_particle_quota                   2
+        emitted_emitter_quota                   5
+        emitted_technique_quota                 5
+        emitted_affector_quota                  5
+        emitted_system_quota                    5
+        material                                Dustkick01
+        renderer                                Billboard
+        {
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Point Dustkick-cloud
+        {
+            emission_rate                       3
+            angle                               40
+            time_to_live                        2.5
+            velocity                            0.03
+            particle_width                      dyn_random
+            {
+                min                             0.5
+                max                             2
+            }
+            particle_height                     dyn_random
+            {
+                min                             0.5
+                max                             2
+            }
+            force_emission                      true
+        }
+        affector                                Scale Affector30
+        {
+            x_scale                             dyn_curved_linear
+            {
+                control_point                   0.00184502 29.9612
+                control_point                   0.199262 3.00277
+                control_point                   0.298893 0.74903
+                control_point                   1 0.00277007
+            }
+            y_scale                             dyn_curved_linear
+            {
+                control_point                   0.00369004 29.9612
+                control_point                   0.195572 3.00277
+                control_point                   0.297048 0.753463
+                control_point                   0.99631 0
+            }
+        }
+        affector                                Colour Affector29
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.132609  1 1 1 1
+            time_colour                         0.404348  0.74902 0.74902 0.74902 0.0901961
+            time_colour                         0.867391  0 0 0 0.0156863
+            time_colour                         1    0 0 0 0
+            colour_operation                    multiply
+        }
+    }
+}

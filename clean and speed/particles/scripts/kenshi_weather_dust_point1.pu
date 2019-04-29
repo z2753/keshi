@@ -1,0 +1,93 @@
+system kenshi_weather_dust_point1
+{
+    category                                    kenshi_particles
+    technique dust_clouds
+    {
+        visual_particle_quota                   1500
+        emitted_emitter_quota                   200
+        emitted_technique_quota                 200
+        emitted_affector_quota                  200
+        material                                kenshi_smoke2_add
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+            billboard_rotation_type             vertex
+        }
+        emitter                                 Point dust_cloud1
+        {
+            emission_rate                       1
+            angle                               180
+            time_to_live                        dyn_random
+            {
+                min                             3
+                max                             5
+            }
+            velocity                            dyn_random
+            {
+                min                             1
+                max                             5
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             30
+                max                             75
+            }
+            start_colour_range                  0.0666667 0.0588235 0.0431373 1
+            end_colour_range                    0.0666667 0.0588235 0.0431373 1
+            colour                              0 0 0 0
+        }
+        emitter                                 Point dust_cloud2
+        {
+            emission_rate                       1
+            angle                               180
+            time_to_live                        dyn_random
+            {
+                min                             3
+                max                             5
+            }
+            velocity                            dyn_random
+            {
+                min                             1
+                max                             5
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             75
+                max                             100
+            }
+            start_colour_range                  0.0666667 0.0588235 0.0431373 1
+            end_colour_range                    0.0666667 0.0588235 0.0431373 1
+            colour                              0 0 0 0
+        }
+        affector                                Colour Affector27
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.658696  1 1 1 1
+            time_colour                         1    0 0 0 0.0156863
+            colour_operation                    multiply
+        }
+        affector                                Scale Affector28
+        {
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0 0.556787
+                control_point                   1 61.4792
+            }
+        }
+        affector                                TextureRotator Affector3
+        {
+            rotation                            dyn_random
+            {
+                min                             0
+                max                             360
+            }
+            rotation_speed                      0
+        }
+        affector                                LinearForce Wind_2
+        {
+            force_vector                        0 10 0
+        }
+    }
+}

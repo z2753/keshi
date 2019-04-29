@@ -1,0 +1,132 @@
+system Ash_Flakez_Black
+{
+    technique Technique29
+    {
+        emitted_emitter_quota                   100
+        material                                Ash_Flakez_Black_01
+        default_particle_width                  0.5
+        default_particle_height                 1
+        default_particle_depth                  3
+        renderer                                Billboard
+        {
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Box Emitter31
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             2
+            }
+            time_to_live                        20
+            mass                                dyn_random
+            {
+                min                             0.5
+                max                             2
+            }
+            velocity                            dyn_random
+            {
+                min                             1
+                max                             11
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             0.5
+                max                             1
+            }
+            direction                           0 -1 0
+        }
+        affector                                Randomiser Affector19
+        {
+            max_deviation_x                     0.2
+            max_deviation_y                     0.03
+            max_deviation_z                     0.2
+        }
+    }
+    technique Technique30
+    {
+        emitted_emitter_quota                   100
+        material                                Ash_Flakez_Black_02
+        default_particle_width                  0.5
+        default_particle_height                 1
+        default_particle_depth                  3
+        renderer                                Billboard
+        {
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Box Emitter32
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             2
+            }
+            time_to_live                        20
+            mass                                dyn_random
+            {
+                min                             0.5
+                max                             2
+            }
+            velocity                            dyn_random
+            {
+                min                             1
+                max                             11
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             0.5
+                max                             1
+            }
+            direction                           0 -1 0
+        }
+        affector                                Randomiser Affector20
+        {
+            max_deviation_x                     0.2
+            max_deviation_y                     0.03
+            max_deviation_z                     0.2
+        }
+    }
+    technique Technique31
+    {
+        emitted_emitter_quota                   100
+        material                                Ash_Flakez_Black_03
+        default_particle_width                  0.5
+        default_particle_height                 1
+        default_particle_depth                  3
+        renderer                                Billboard
+        {
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Box Emitter33
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             2
+            }
+            time_to_live                        20
+            mass                                dyn_random
+            {
+                min                             0.5
+                max                             2
+            }
+            velocity                            dyn_random
+            {
+                min                             1
+                max                             11
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             0.5
+                max                             1
+            }
+            direction                           0 -1 0
+        }
+        affector                                Randomiser Affector21
+        {
+            max_deviation_x                     0.2
+            max_deviation_y                     0.03
+            max_deviation_z                     0.2
+        }
+    }
+}

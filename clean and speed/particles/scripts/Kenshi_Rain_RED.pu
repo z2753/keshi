@@ -1,0 +1,51 @@
+system Kenshi_red_rain
+{
+    fast_forward                                1 1
+    category                                    kenshi_particles
+    technique 
+    {
+        visual_particle_quota                   3000
+        emitted_emitter_quota                   1000
+        emitted_technique_quota                 100
+        emitted_affector_quota                  100
+        emitted_system_quota                    700
+        material                                Kenshi_Rain_RED
+        default_particle_width                  1
+        default_particle_height                 10
+        renderer                                Billboard
+        {
+            billboard_type                      oriented_self
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       100
+            angle                               1
+            time_to_live                        dyn_random
+            {
+                min                             0.3
+                max                             1
+            }
+            velocity                            160
+            position                            0 15 0
+            direction                           0.2 -1 0
+            colour                              0.321569 0.321569 0.321569 1
+            box_width                           220
+            box_height                          120
+            box_depth                           220
+        }
+        observer                                OnPosition 
+        {
+            handler                             DoPlacementParticle 
+            {
+            }
+            handler                             DoPlacementParticle 
+            {
+            }
+            handler                             DoExpire 
+            {
+            }
+            position_y                          less_than -5.85
+        }
+    }
+}

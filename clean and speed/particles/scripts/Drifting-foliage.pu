@@ -1,0 +1,399 @@
+system Drifting-foliage
+{
+    scale                                       4 4 7
+    category                                    General
+    technique Drifting-foliage01
+    {
+        position                                0 8 0
+        visual_particle_quota                   120
+        emitted_emitter_quota                   120
+        emitted_technique_quota                 120
+        emitted_affector_quota                  120
+        emitted_system_quota                    120
+        material                                Drifting-foliage01
+        default_particle_width                  0.5
+        default_particle_height                 0.5
+        default_particle_depth                  0.5
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       3
+            time_to_live                        dyn_random
+            {
+                min                             12
+                max                             24
+            }
+            velocity                            dyn_random
+            {
+                min                             80
+                max                             200
+            }
+            position                            40 20 3
+            direction                           -0.5 -0.38 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 0
+            time_colour                         0.0767196  1 1 1 1
+            time_colour                         0.460317  0.996078 0.992157 0.988235 0.992157
+            time_colour                         0.738095  0.996581 0.993161 0.989742 0.865083
+            time_colour                         0.997355  1 1 1 0
+            colour_operation                    multiply
+        }
+        affector                                TextureRotator 
+        {
+            enabled                             false
+            rotation_speed                      dyn_random
+            {
+                min                             -3
+                max                             -12
+            }
+        }
+        affector                                Randomiser 
+        {
+            max_deviation_x                     1
+            max_deviation_y                     8
+            max_deviation_z                     1
+            time_step                           8
+        }
+    }
+    technique Drifting-foliage02
+    {
+        position                                0 8 0
+        visual_particle_quota                   5
+        material                                Drifting-foliage02
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       3
+            time_to_live                        dyn_random
+            {
+                min                             9
+                max                             19
+            }
+            velocity                            dyn_random
+            {
+                min                             40
+                max                             70
+            }
+            repeat_delay                        dyn_random
+            {
+                min                             0
+                max                             0
+            }
+            position                            40 20 0
+            direction                           -1 -10 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 0
+            time_colour                         0.0952381  1 1 1 1
+            time_colour                         0.462963  1 1 1 0.992157
+            time_colour                         0.73545  1 1 1 0.820249
+            time_colour                         0.997355  1 1 1 0
+            colour_operation                    multiply
+        }
+        affector                                TextureRotator 
+        {
+            rotation                            dyn_random
+            {
+                min                             12
+                max                             -14
+            }
+            rotation_speed                      dyn_random
+            {
+                min                             -2
+                max                             3
+            }
+        }
+        affector                                Randomiser 
+        {
+            max_deviation_x                     2
+            max_deviation_y                     2
+            max_deviation_z                     5
+            time_step                           1
+        }
+        affector                                Randomiser 
+        {
+            max_deviation_x                     2
+            max_deviation_y                     2
+            max_deviation_z                     2
+            time_step                           1
+        }
+    }
+    technique Drifting-foliage03
+    {
+        position                                0 8 0
+        visual_particle_quota                   200
+        emitted_emitter_quota                   500
+        emitted_technique_quota                 500
+        emitted_affector_quota                  500
+        emitted_system_quota                    500
+        material                                Drifting-foliage03
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            angle                               0
+            time_to_live                        dyn_random
+            {
+                min                             6
+                max                             8
+            }
+            velocity                            dyn_random
+            {
+                min                             25
+                max                             35
+            }
+            position                            40 20 0
+            direction                           -1 -0.3 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 0
+            time_colour                         0.0873016  1 1 1 1
+            time_colour                         0.462963  1 1 1 0.992157
+            time_colour                         0.73545  1 1 1 0.820249
+            time_colour                         0.997355  1 1 1 0
+            colour_operation                    multiply
+        }
+        affector                                TextureRotator 
+        {
+            enabled                             false
+            rotation_speed                      dyn_random
+            {
+                min                             2
+                max                             17
+            }
+        }
+    }
+    technique Drifting-foliage04
+    {
+        position                                0 8 0
+        visual_particle_quota                   200
+        emitted_emitter_quota                   500
+        emitted_technique_quota                 200
+        emitted_affector_quota                  200
+        emitted_system_quota                    200
+        material                                Drifting-foliage04
+        default_particle_width                  0.4
+        default_particle_height                 0.4
+        default_particle_depth                  0.8
+        renderer                                Billboard
+        {
+            common_direction                    1 0 0
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            time_to_live                        dyn_random
+            {
+                min                             6
+                max                             8
+            }
+            velocity                            dyn_random
+            {
+                min                             20
+                max                             40
+            }
+            position                            40 20 0
+            direction                           -1 -6 0
+            orientation                         1 0 -0.8 0
+            start_orientation_range             1 0 -0.8 0
+            end_orientation_range               1 0 -1.2 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 0
+            time_colour                         0.0714286  1 1 1 1
+            time_colour                         0.462963  1 1 1 0.992157
+            time_colour                         0.73545  1 1 1 0.820249
+            time_colour                         0.997355  1 1 1 0
+            colour_operation                    multiply
+        }
+        affector                                TextureRotator 
+        {
+            rotation_speed                      dyn_random
+            {
+                min                             0.5
+                max                             4
+            }
+        }
+    }
+    technique Drifting-foliage05
+    {
+        position                                0 8 0
+        visual_particle_quota                   200
+        emitted_technique_quota                 20
+        emitted_affector_quota                  20
+        emitted_system_quota                    20
+        material                                Drifting-foliage05
+        default_particle_width                  0.4
+        default_particle_height                 0.4
+        default_particle_depth                  0.4
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            time_to_live                        dyn_random
+            {
+                min                             6
+                max                             8
+            }
+            velocity                            dyn_random
+            {
+                min                             60
+                max                             100
+            }
+            position                            40 20 0
+            direction                           -1 -0.3 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 0
+            time_colour                         0.0687831  1 1 1 1
+            time_colour                         0.462963  1 1 1 0.992157
+            time_colour                         0.73545  1 1 1 0.820249
+            time_colour                         0.997355  1 1 1 0
+            colour_operation                    multiply
+        }
+        affector                                TextureRotator 
+        {
+            rotation_speed                      dyn_random
+            {
+                min                             2
+                max                             17
+            }
+        }
+    }
+    technique Drifting-foliage06
+    {
+        position                                0 8 0
+        visual_particle_quota                   200
+        emitted_technique_quota                 20
+        emitted_affector_quota                  20
+        emitted_system_quota                    20
+        material                                Drifting-foliage06
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            time_to_live                        dyn_random
+            {
+                min                             6
+                max                             8
+            }
+            velocity                            dyn_random
+            {
+                min                             60
+                max                             120
+            }
+            position                            40 20 0
+            direction                           -1 -0.3 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 0
+            time_colour                         0.0740741  1 1 1 1
+            time_colour                         0.462963  1 1 1 0.992157
+            time_colour                         0.73545  1 1 1 0.820249
+            time_colour                         0.997355  1 1 1 0
+            colour_operation                    multiply
+        }
+        affector                                TextureRotator 
+        {
+            rotation_speed                      dyn_random
+            {
+                min                             2
+                max                             17
+            }
+        }
+    }
+    technique Drifting-foliage07
+    {
+        position                                0 8 0
+        visual_particle_quota                   200
+        emitted_technique_quota                 20
+        emitted_affector_quota                  20
+        emitted_system_quota                    20
+        material                                Drifting-foliage07
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            time_to_live                        dyn_random
+            {
+                min                             6
+                max                             8
+            }
+            velocity                            dyn_random
+            {
+                min                             70
+                max                             140
+            }
+            position                            40 20 0
+            direction                           -1 -0.3 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 0
+            time_colour                         0.0687831  1 1 1 1
+            time_colour                         0.462963  1 1 1 0.992157
+            time_colour                         0.73545  1 1 1 0.820249
+            time_colour                         0.997355  1 1 1 0
+            colour_operation                    multiply
+        }
+        affector                                TextureRotator 
+        {
+            rotation_speed                      dyn_random
+            {
+                min                             -0.3
+                max                             4
+            }
+        }
+    }
+}

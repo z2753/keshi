@@ -1,0 +1,90 @@
+system Desert-Sand-Strings
+{
+    scale_velocity                              0.1
+    scale                                       9 9 9
+    technique 
+    {
+        visual_particle_quota                   40
+        material                                SandBlown_Streaks
+        default_particle_width                  2.4
+        default_particle_height                 2.4
+        default_particle_depth                  2.4
+        renderer                                Sphere
+        {
+            sorting                             true
+        }
+        emitter                                 Point StreakEmitter
+        {
+            emission_rate                       dyn_oscillate
+            {
+                oscillate_frequency             0.1
+                oscillate_phase                 0
+                oscillate_base                  2
+                oscillate_amplitude             2
+                oscillate_type                  sine
+            }
+            angle                               dyn_curved_linear
+            {
+                control_point                   0 0.0457031
+                control_point                   0.173432 0.34349
+                control_point                   0.369004 0.0498616
+                control_point                   0.615008 0.279297
+                control_point                   1.15367 1.26445
+            }
+            time_to_live                        dyn_random
+            {
+                min                             0.5
+                max                             3
+            }
+            velocity                            0.001
+            direction                           0 0 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.3  0.737255 0.694118 0.678431 1
+            time_colour                         0.6  0.858824 0.686275 0.556863 1
+            time_colour                         1    0 0 0 0
+        }
+        affector                                GeometryRotator 
+        {
+            use_own_rotation                    true
+            rotation_axis                       -1 10 -2
+            rotation_speed                      dyn_curved_linear
+            {
+                control_point                   0 0.503906
+                control_point                   0.0239852 0.914127
+                control_point                   0.0487047 0.625
+                control_point                   0.0774908 1.16343
+                control_point                   0.120524 1.25
+                control_point                   0.138376 1.82825
+                control_point                   0.168403 1.5
+                control_point                   0.197417 2.22992
+                control_point                   0.396679 2.88089
+            }
+        }
+        affector                                Scale 
+        {
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0 0.731302
+                control_point                   0.0295203 2.26039
+                control_point                   0.0848708 0.797783
+                control_point                   0.123616 4.18837
+                control_point                   0.186347 2.79224
+                control_point                   0.258303 7.57895
+                control_point                   1.48708 10.2382
+            }
+        }
+        affector                                Scale Affector3
+        {
+            x_scale                             5
+        }
+        affector                                Scale Affector4
+        {
+            x_scale                             10
+            y_scale                             10
+            z_scale                             10
+        }
+    }
+}

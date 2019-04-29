@@ -1,0 +1,52 @@
+system Kenshi_Rain_Basic01
+{
+    fast_forward                                1 1
+    category                                    kenshi_particles
+    technique 
+    {
+        visual_particle_quota                   3000
+        emitted_emitter_quota                   700
+        emitted_technique_quota                 40
+        emitted_affector_quota                  40
+        emitted_system_quota                    40
+        material                                Kenshi_rain_basic
+        default_particle_width                  0.25
+        default_particle_height                 2
+        renderer                                Billboard
+        {
+            billboard_type                      oriented_self
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       100
+            angle                               1
+            time_to_live                        8
+            velocity                            dyn_random
+            {
+                min                             60
+                max                             82
+            }
+            position                            0 15 0
+            direction                           0.2 -1 0
+            box_width                           100
+            box_height                          20
+            box_depth                           100
+        }
+        observer                                OnPosition 
+        {
+            handler                             DoPlacementParticle 
+            {
+                force_emitter                   Up-splash
+            }
+            handler                             DoPlacementParticle 
+            {
+            }
+            handler                             DoExpire 
+            {
+            }
+            position_y                          less_than -5.85
+        }
+    }
+
+}

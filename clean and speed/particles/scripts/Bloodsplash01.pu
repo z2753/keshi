@@ -1,0 +1,196 @@
+system Bloodsplash01
+{
+    technique Bloodsplash01
+    {
+        keep_local                              true
+        visual_particle_quota                   1
+        emitted_emitter_quota                   1
+        emitted_technique_quota                 1
+        emitted_affector_quota                  1
+        emitted_system_quota                    1
+        material                                Bloodsplash01_A
+        default_particle_width                  2
+        default_particle_height                 2
+        default_particle_depth                  2
+        renderer                                Billboard
+        {
+            billboard_rotation_type             vertex
+        }
+        emitter                                 Point Footsplashes01
+        {
+            time_to_live                        0.15
+            velocity                            0
+            duration                            0.15
+        }
+        affector                                Scale Affector0
+        {
+            xyz_scale                           dyn_curved_spline
+            {
+                control_point                   0.00738007 0.903046
+                control_point                   0.0202952 19.5457
+                control_point                   0.0627306 49.6399
+            }
+        }
+        affector                                Colour Affector3
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.530435  1 1 1 1
+            time_colour                         1    0 0 0 0
+        }
+    }
+    technique Bloodsplash02
+    {
+        visual_particle_quota                   1
+        emitted_emitter_quota                   1
+        emitted_technique_quota                 1
+        emitted_affector_quota                  1
+        emitted_system_quota                    1
+        material                                Bloodsplash01_B
+        default_particle_width                  0.5
+        default_particle_height                 0.5
+        default_particle_depth                  0.5
+        renderer                                Billboard
+        {
+            billboard_rotation_type             vertex
+        }
+        emitter                                 Point Footsplashes02
+        {
+            time_to_live                        0.05
+            velocity                            0
+            duration                            0.05
+        }
+        affector                                Colour Affector2
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.234783  1 1 1 1
+            time_colour                         0.491304  1 1 1 1
+            time_colour                         0.51087  0 0 0 0
+            time_colour                         1    0 0 0 0
+        }
+        affector                                Scale Affector14
+        {
+            x_scale                             dyn_curved_linear
+            {
+                control_point                   0.656827 0
+                control_point                   1 65.9003
+            }
+        }
+    }
+    technique Bloodsplash03
+    {
+        visual_particle_quota                   1
+        emitted_emitter_quota                   1
+        emitted_technique_quota                 1
+        emitted_affector_quota                  1
+        emitted_system_quota                    1
+        material                                Bloodsplash01_C
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+            billboard_rotation_type             vertex
+        }
+        emitter                                 Point Footsplashes03
+        {
+            time_to_live                        0.15
+            velocity                            0
+            duration                            0.15
+        }
+        affector                                Scale Affector4
+        {
+            xyz_scale                           dyn_curved_spline
+            {
+                control_point                   0 0
+                control_point                   0.446494 2.99169
+                control_point                   0.621771 19.6953
+                control_point                   0.998155 14.6814
+            }
+        }
+        affector                                Colour Affector5
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.121739  1 1 1 1
+            time_colour                         0.258696  1 1 1 1
+            time_colour                         0.336957  0 0 0 0.0196078
+            time_colour                         0.404348  1 1 1 1
+            time_colour                         0.663043  1 1 1 1
+            time_colour                         0.752174  0.501961 0.501961 0.501961 0.639216
+            time_colour                         0.806522  1 1 1 1
+            time_colour                         0.895652  1 1 1 1
+            time_colour                         1    0 0 0 0
+        }
+        affector                                TextureRotator Affector16
+        {
+            rotation                            dyn_random
+            {
+                min                             -1
+                max                             1
+            }
+            rotation_speed                      dyn_random
+            {
+                min                             1
+                max                             -1
+            }
+        }
+    }
+    technique Technique12
+    {
+        keep_local                              true
+        visual_particle_quota                   21
+        emitted_emitter_quota                   13
+        emitted_technique_quota                 12
+        emitted_affector_quota                  13
+        emitted_system_quota                    13
+        material                                Bloodsplash01_D
+        default_particle_width                  2
+        default_particle_height                 2
+        default_particle_depth                  2
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point Emitter12
+        {
+            emission_rate                       3
+            time_to_live                        dyn_random
+            {
+                min                             0.2
+                max                             0.2
+            }
+            velocity                            4
+            duration                            0.2
+        }
+        affector                                Scale Affector12
+        {
+            xyz_scale                           dyn_curved_spline
+            {
+                control_point                   0 0
+                control_point                   0.304428 17.169
+                control_point                   0.987085 11.4183
+            }
+        }
+        affector                                Colour Affector13
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.0913043  1 1 1 1
+            time_colour                         0.434783  1 1 1 1
+            time_colour                         1    0 0 0 0
+        }
+        affector                                TextureRotator Affector15
+        {
+            use_own_rotation                    true
+            rotation                            dyn_random
+            {
+                min                             2
+                max                             -2
+            }
+            rotation_speed                      dyn_curved_spline
+            {
+                control_point                   0 0.32133
+                control_point                   0.350554 0.703601
+                control_point                   0.765683 0.728532
+                control_point                   1 0.975069
+            }
+        }
+    }
+}

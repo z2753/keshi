@@ -1,0 +1,111 @@
+system Kenshi_rising_steam_slow
+{
+    scale                                       14 14 14
+    technique Kenshi_Mist_Cloud
+    {
+        visual_particle_quota                   100
+        material                                Kenshi_mist_cloud
+        default_particle_width                  20
+        default_particle_height                 20
+        default_particle_depth                  20
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box Kenshi_Mist_Cloud
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            angle                               dyn_random
+            {
+                min                             1
+                max                             7
+            }
+            time_to_live                        dyn_random
+            {
+                min                             5
+                max                             10
+            }
+            mass                                dyn_random
+            {
+                min                             1
+                max                             800
+            }
+            velocity                            dyn_random
+            {
+                min						   2
+                max                             2
+            }
+            duration                            dyn_random
+            {
+                min                             4
+                max                             8
+            }
+            repeat_delay                        0.1
+            all_particle_dimensions             dyn_curved_spline
+            {
+                control_point                   0 0.221606
+                control_point                   0.359779 2.96953
+                control_point                   0.464945 15.7784
+            }
+            particle_width                      40
+            particle_height                     40
+            particle_depth                      40
+            position                            0 -5 0
+            direction                           0.5 4.95 0.5
+            orientation                         7 0 -3 0
+            box_height                          20
+        }
+        affector                                Scale Affector0
+        {
+            mass_affector                       100
+            xyz_scale                           dyn_curved_spline
+            {
+                control_point                   0.00184502 0.0249307
+                control_point                   0.98155 11.5055
+                control_point                   3.60886 13.4501
+            }
+            x_scale                             dyn_curved_linear
+            {
+                control_point                   0 0.221607
+                control_point                   0.902214 31.4681
+            }
+            y_scale                             dyn_curved_linear
+            {
+                control_point                   0.00553506 0.415512
+                control_point                   0.651291 15.5568
+            }
+            z_scale                             dyn_curved_linear
+            {
+                control_point                   0.00184502 0.747922
+                control_point                   0.824723 15.3352
+                control_point                   0.835793 15.7341
+            }
+        }
+        affector                                Colour Affector1
+        {
+            time_colour                         0    1 1 1 0
+            time_colour                         0.0804348  0.933333 0.933333 0.933333 0
+            time_colour                         0.402174  0.85098 0.862745 0.819608 0.54902
+            time_colour                         0.936957  0.752941 0.768627 0.733333 0.0823529
+            time_colour                         1    0 0 0 0
+            colour_operation                    multiply
+        }
+        affector                                TextureRotator Affector5
+        {
+            use_own_rotation                    true
+            rotation                            dyn_random
+            {
+                min                             -1
+                max                             1
+            }
+            rotation_speed                      dyn_random
+            {
+                min                             0.25
+                max                             0.25
+            }
+        }
+    }
+}

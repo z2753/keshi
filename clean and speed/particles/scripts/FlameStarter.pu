@@ -1,0 +1,245 @@
+system FlameStarter
+{
+    technique Flame1
+    {
+        visual_particle_quota                   1
+        material                                Flame1
+        default_particle_width                  80
+        default_particle_height                 30
+        default_particle_depth                  80
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point Emitter1
+        {
+            emission_rate                       dyn_oscillate
+            {
+                oscillate_frequency             0.4
+                oscillate_phase                 0.3
+                oscillate_base                  1
+                oscillate_amplitude             3
+                oscillate_type                  sine
+            }
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             8
+                max                             15
+            }
+            duration                            dyn_oscillate
+            {
+                oscillate_frequency             0.1
+                oscillate_phase                 10
+                oscillate_base                  2
+                oscillate_amplitude             20
+                oscillate_type                  sine
+            }
+            repeat_delay                        0.001
+            all_particle_dimensions             dyn_curved_linear
+            {
+                control_point                   0 1.37396
+                control_point                   0.297048 5.38504
+            }
+            particle_width                      80
+            particle_height                     1
+            particle_depth                      80
+            position                            0 -1 0
+        }
+        affector                                Scale Affector0
+        {
+            y_scale                             dyn_curved_spline
+            {
+                control_point                   0 2.85042
+                control_point                   0.201107 49.4626
+            }
+        }
+        affector                                Colour Affector1
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.26087  1 0.694118 0.356863 1
+            time_colour                         1    0 0 0 0
+        }
+    }
+    technique Flame2
+    {
+        visual_particle_quota                   1
+        material                                Flame2
+        default_particle_width                  80
+        default_particle_height                 30
+        default_particle_depth                  80
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point Emitter2
+        {
+            emission_rate                       dyn_oscillate
+            {
+                oscillate_frequency             0.4
+                oscillate_phase                 0.4
+                oscillate_base                  1
+                oscillate_amplitude             3
+                oscillate_type                  sine
+            }
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             8
+                max                             15
+            }
+            duration                            dyn_oscillate
+            {
+                oscillate_frequency             0.1
+                oscillate_phase                 10
+                oscillate_base                  2
+                oscillate_amplitude             20
+                oscillate_type                  sine
+            }
+            repeat_delay                        0.001
+            all_particle_dimensions             dyn_curved_linear
+            {
+                control_point                   0 0.108033
+                control_point                   0.297048 5.31856
+            }
+            particle_width                      80
+            particle_height                     1
+            particle_depth                      80
+            position                            0 -1 0
+        }
+        affector                                Scale Affector5
+        {
+            y_scale                             dyn_curved_spline
+            {
+                control_point                   0.00184502 2.10526
+                control_point                   0.202952 50.6704
+            }
+        }
+        affector                                Colour Affector4
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.356522  1 0.803922 0.592157 1
+            time_colour                         1    0 0 0 0
+        }
+    }
+    technique Flame3
+    {
+        visual_particle_quota                   1
+        material                                Flame3
+        default_particle_width                  80
+        default_particle_height                 30
+        default_particle_depth                  80
+        spatial_hashing_cell_dimension          12
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point Emitter3
+        {
+            emission_rate                       dyn_oscillate
+            {
+                oscillate_frequency             0.4
+                oscillate_phase                 0.5
+                oscillate_base                  1
+                oscillate_amplitude             3
+                oscillate_type                  sine
+            }
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.5
+            }
+            velocity                            dyn_random
+            {
+                min                             8
+                max                             15
+            }
+            duration                            dyn_oscillate
+            {
+                oscillate_frequency             0.1
+                oscillate_phase                 10
+                oscillate_base                  2
+                oscillate_amplitude             20
+                oscillate_type                  sine
+            }
+            repeat_delay                        0.001
+            all_particle_dimensions             dyn_curved_linear
+            {
+                control_point                   0 1.73961
+                control_point                   0.300738 3.12465
+            }
+            particle_width                      80
+            particle_height                     1
+            particle_depth                      80
+            position                            0 -1 0
+        }
+        affector                                Scale Affector17
+        {
+            y_scale                             dyn_curved_linear
+            {
+                control_point                   0 2.43767
+                control_point                   0.201107 50.1247
+            }
+        }
+        affector                                Colour Affector16
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.328261  1 0.803922 0.541176 1
+            time_colour                         1    0 0 0 0
+        }
+    }
+    technique SteadyFlame
+    {
+        visual_particle_quota                   180
+        emitted_emitter_quota                   100
+        emitted_technique_quota                 30
+        emitted_affector_quota                  30
+        emitted_system_quota                    30
+        material                                Flame1
+        default_particle_width                  8
+        default_particle_height                 4
+        default_particle_depth                  8
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Circle Emitter24
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.3
+            }
+            velocity                            dyn_random
+            {
+                min                             4
+                max                             8
+            }
+            position                            0 -0.4 0
+            radius                              1
+        }
+        affector                                Vortex Affector19
+        {
+            rotation_speed                      dyn_random
+            {
+                min                             -1
+                max                             2
+            }
+        }
+        affector                                Colour Affector18
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.269565  1 0.839216 0.501961 0.329412
+            time_colour                         1    0 0 0 0
+        }
+    }
+}

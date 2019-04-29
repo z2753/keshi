@@ -1,0 +1,65 @@
+system kenshi_run_dust1
+{
+    category                                    kenshi_particles
+    technique 
+    {
+        material                                kenshi_smoke2_add
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+            billboard_rotation_type             vertex
+        }
+        emitter                                 Box Emitter4
+        {
+            emission_rate                       1
+            angle                               3
+            time_to_live                        dyn_random
+            {
+                min                             2
+                max                             0.5
+            }
+            velocity                            dyn_random
+            {
+                min                             0
+                max                             8
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             15
+                max                             20
+            }
+            start_colour_range                  0.0470588 0.0470588 0.0470588 1
+            end_colour_range                    0.0470588 0.0470588 0.0470588 1
+            colour                              0 0 0 0
+            box_width                           10
+            box_height                          5
+            box_depth                           10
+        }
+        affector                                Colour Affector27
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.458696  1 1 1 1
+            time_colour                         1    0 0 0 0.0156863
+            colour_operation                    multiply
+        }
+        affector                                Scale Affector28
+        {
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0 0.556787
+                control_point                   1 20.4709
+            }
+        }
+        affector                                TextureRotator Affector3
+        {
+            rotation                            dyn_random
+            {
+                min                             0
+                max                             360
+            }
+            rotation_speed                      0
+        }
+    }
+}

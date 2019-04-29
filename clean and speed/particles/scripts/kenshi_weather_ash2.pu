@@ -1,0 +1,43 @@
+system kenshi_weather_ash2
+{
+    category                                    kenshi_particles
+    technique Technique19
+    {
+        material                                kenshi_ash_particle1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box Emitter24
+        {
+            emission_rate                       10
+            angle                               90
+            time_to_live                        dyn_random
+            {
+                min                             0.5
+                max                             2
+            }
+            velocity                            dyn_random
+            {
+                min                             0
+                max                             30
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            direction                           0 -1 0
+            colour                              0.45098 0.45098 0.45098 1
+            box_width                           1000
+            box_depth                           1000
+        }
+        affector                                Colour Affector24
+        {
+            time_colour                         0    1 1 1 0
+            time_colour                         0.2  1 1 1 1
+            time_colour                         0.580435  1 1 1 1
+            time_colour                         1    1 1 1 0
+            colour_operation                    multiply
+        }
+    }
+}

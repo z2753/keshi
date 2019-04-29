@@ -1,0 +1,116 @@
+system Desert-dust-swirls
+{
+    scale_velocity                              0.5
+    scale                                       2 2 2
+    technique Turbulent-dust
+    {
+        visual_particle_quota                   9
+        emitted_emitter_quota                   9
+        emitted_technique_quota                 9
+        emitted_affector_quota                  9
+        emitted_system_quota                    7
+        material                                Desert-dust-swirls
+        default_particle_width                  150
+        default_particle_height                 150
+        default_particle_depth                  150
+        renderer                                Billboard
+        {
+            sorting                             true
+        }
+        emitter                                 Circle smoke
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            angle                               180
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             4
+            }
+            mass                                dyn_random
+            {
+                min                             1
+                max                             8
+            }
+            velocity                            dyn_random
+            {
+                min                             20
+                max                             80
+            }
+            position                            0 -50 0
+            radius                              400
+        }
+        affector                                Vortex Affector42
+        {
+            rotation_axis                       0 1 0
+            rotation_speed                      dyn_random
+            {
+                min                             0.08
+                max                             0.8
+            }
+        }
+        affector                                TextureRotator Affector40
+        {
+            rotation                            dyn_random
+            {
+                min                             2
+                max                             -1
+            }
+            rotation_speed                      dyn_random
+            {
+                min                             0.3
+                max                             -2
+            }
+        }
+        affector                                ForceField Affector43
+        {
+            mass_affector                       5
+            delta                               220
+            force                               5000
+            octaves                             1
+            frequency                           22
+            amplitude                           4
+            persistence                         550
+            forcefield_size                     20001
+            movement                            50 2500 50
+            movement_frequency                  12
+        }
+        affector                                Scale Affector41
+        {
+            position                            0 -145 0
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0.0110701 2.28809
+                control_point                   0.298893 0
+                control_point                   1.51661 0
+                control_point                   2.41328 2.17175
+                control_point                   3 6.17452
+            }
+        }
+        affector                                Colour Affector44
+        {
+            time_colour                         0    0 0 0 0
+            time_colour                         0.119565  0.294118 0.203922 0.156863 0
+            time_colour                         0.26087  0.537255 0.466667 0.439216 0.309804
+            time_colour                         0.667391  0.584314 0.533333 0.509804 0
+            time_colour                         1    0 0 0 0
+        }
+        affector                                Jet Affector45
+        {
+            position                            0 -5 0
+            mass_affector                       9
+            acceleration                        dyn_random
+            {
+                min                             0.4
+                max                             0.8
+            }
+        }
+        affector                                LinearForce Affector6
+        {
+            force_vector                        0 10 0
+        }
+    }
+}

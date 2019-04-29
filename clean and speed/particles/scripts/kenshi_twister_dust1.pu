@@ -1,0 +1,114 @@
+system kenshi_twister_dust1
+{
+    category                                    kenshi_particles
+    technique 
+    {
+        visual_particle_quota                   2000
+        emitted_emitter_quota                   15
+        material                                kenshi_smoke1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Circle CircleEmitter
+        {
+            emission_rate                       1
+            time_to_live                        dyn_random
+            {
+                min                             6
+                max                             10
+            }
+            velocity                            dyn_random
+            {
+                min                             20
+                max                             70
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             20
+                max                             60
+            }
+            keep_local                          true
+            colour                              0.776471 0.737255 0.619608 0.27451
+            radius                              70
+        }
+        emitter                                 Circle CircleEmitter2
+        {
+            emission_rate                       1
+            time_to_live                        dyn_random
+            {
+                min                             3
+                max                             5
+            }
+            velocity                            dyn_random
+            {
+                min                             20
+                max                             70
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             5
+                max                             30
+            }
+            keep_local                          true
+            colour                              0.776471 0.737255 0.619608 0.27451
+            radius                              130
+        }
+        emitter                                 Circle Emitter7
+        {
+            angle                               30
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             2
+            }
+            velocity                            dyn_random
+            {
+                min                             60
+                max                             120
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            colour                              0.466667 0.407843 0.266667 1
+            radius                              120
+        }
+        affector                                Vortex Affector61
+        {
+            rotation_axis                       0 1 0
+            rotation_speed                      dyn_random
+            {
+                min                             0
+                max                             10
+            }
+        }
+        affector                                Scale Affector1
+        {
+            exclude_emitter                     Emitter7 
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0.00369004 2.66482
+                control_point                   1 32.3019
+            }
+        }
+        affector                                Colour Affector21
+        {
+            exclude_emitter                     Emitter7 
+            time_colour                         0    1 1 1 0
+            time_colour                         0.0608696  1 1 1 1
+            time_colour                         0.541304  1 1 1 0.54902
+            time_colour                         1    1 1 1 0
+            colour_operation                    multiply
+        }
+        affector                                Colour Affector22
+        {
+            exclude_emitter                     CircleEmitter CircleEmitter2 
+            time_colour                         0    1 1 1 0
+            time_colour                         0.128261  1 1 1 1
+            time_colour                         0.73913  1 1 1 1
+            time_colour                         1    1 1 1 0
+            colour_operation                    multiply
+        }
+    }
+}

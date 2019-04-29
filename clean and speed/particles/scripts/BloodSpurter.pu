@@ -1,0 +1,61 @@
+system Bloodspurter01
+{
+    technique 
+    {
+        material                                Bloodsplash01_D
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       3
+            angle                               5
+            time_to_live                        2.4
+            velocity                            dyn_random
+            {
+                min                             1.5
+                max                             3
+            }
+            direction                           1 -0 0
+        }
+        affector                                LinearForce Affector161
+        {
+            force_vector                        0 -4 0
+        }
+        affector                                Scale Affector2
+        {
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0 -0.204987
+                control_point                   0.669742 -0.0193906
+                control_point                   1.11808 0.753463
+                control_point                   2.62915 0.362881
+                control_point                   3 0.0747921
+            }
+        }
+        affector                                TextureRotator Affector3
+        {
+            rotation                            dyn_random
+            {
+                min                             4
+                max                             -4
+            }
+            rotation_speed                      dyn_random
+            {
+                min                             1.5
+                max                             -1.5
+            }
+        }
+        affector                                Colour Affector27
+        {
+            time_colour                         0    0 0 0 1
+            time_colour                         0.0391304  1 1 1 1
+            time_colour                         0.832609  1 1 1 1
+            time_colour                         0.969565  0.501961 0.501961 0.501961 0.498039
+            time_colour                         1    0 0 0 0
+        }
+    }
+}

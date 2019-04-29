@@ -1,0 +1,100 @@
+system groundsand_p
+{
+    scale_velocity                              10
+    scale                                       35 10 35
+    category                                    kenshi_p2
+    technique Sand-Stream
+    {
+        visual_particle_quota                   100
+        emitted_emitter_quota                   9
+        emitted_technique_quota                 4
+        emitted_affector_quota                  4
+        emitted_system_quota                    4
+        material                                Twister_chuff_Desert
+        default_particle_width                  1
+        default_particle_height                 1
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point Sand-Stream
+        {
+            emission_rate                       dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            angle                               dyn_random
+            {
+                min                             0
+                max                             1
+            }
+            time_to_live                        dyn_random
+            {
+                min                             4
+                max                             9
+            }
+            mass                                dyn_random
+            {
+                min                             1
+                max                             100
+            }
+            velocity                            dyn_random
+            {
+                min                             3
+                max                             20
+            }
+            duration                            7
+            repeat_delay                        0.1
+            all_particle_dimensions             1
+            particle_width                      1
+            particle_height                     1
+            particle_depth                      1
+            direction                           0.5 0.1 0.5
+            orientation                         7 0 -3 0
+        }
+        affector                                Scale Affector0
+        {
+            mass_affector                       100
+            x_scale                             dyn_curved_linear
+            {
+                control_point                   0 0.221607
+                control_point                   0.518074 9.5
+                control_point                   0.902214 31.4681
+            }
+            y_scale                             dyn_curved_linear
+            {
+                control_point                   0.00553506 0.415512
+                control_point                   0.651291 15.5568
+            }
+            z_scale                             dyn_curved_linear
+            {
+                control_point                   0.00184502 0.747922
+                control_point                   0.824723 15.3352
+                control_point                   0.835793 15.7341
+            }
+        }
+        affector                                Colour Affector1
+        {
+            time_colour                         0    1 1 1 0
+            time_colour                         0.206349  1 0.988235 0.984314 0
+            time_colour                         0.563492  0.929412 0.847059 0.839216 0.313726
+            time_colour                         0.867725  0.74902 0.74902 0.74902 0.0431373
+            time_colour                         0.960317  0 0 0 0
+        }
+        affector                                TextureRotator Affector5
+        {
+            rotation                            dyn_random
+            {
+                min                             -5
+                max                             7
+            }
+            rotation_speed                      0.3
+        }
+        affector                                Vortex Affector3
+        {
+            rotation_axis                       0 1 0
+            rotation_speed                      0.1
+        }
+    }
+}

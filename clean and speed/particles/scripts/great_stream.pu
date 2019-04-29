@@ -1,0 +1,104 @@
+system great_stream
+{
+    scale_velocity                              3
+    scale                                       14 14 14
+    category                                    kenshi_p2
+    technique Sand-Stream
+    {
+        visual_particle_quota                   3000
+        material                                DustMite_brighter
+        default_particle_width                  20
+        default_particle_height                 20
+        default_particle_depth                  20
+        renderer                                Billboard
+        {
+            billboard_rotation_type             vertex
+        }
+        emitter                                 Box Sand-Stream
+        {
+            emission_rate                       3
+            angle                               dyn_random
+            {
+                min                             1
+                max                             3
+            }
+            time_to_live                        dyn_random
+            {
+                min                             5
+                max                             10
+            }
+            mass                                dyn_random
+            {
+                min                             1
+                max                             800
+            }
+            velocity                            dyn_random
+            {
+                min                             40
+                max                             120
+            }
+            duration                            5
+            repeat_delay                        0.1
+            all_particle_dimensions             dyn_curved_spline
+            {
+                control_point                   0 0.221606
+                control_point                   0.359779 2.96953
+                control_point                   0.464945 15.7784
+            }
+            particle_width                      80
+            particle_height                     80
+            particle_depth                      80
+            direction                           0.5 -0.01 0.5
+            orientation                         7 0 -3 0
+            box_width                           30
+            box_height                          20
+            box_depth                           30
+        }
+        affector                                Scale Affector0
+        {
+            mass_affector                       100
+            xyz_scale                           dyn_curved_linear
+            {
+                control_point                   0 0.01
+                control_point                   0.286112 4.46875
+                control_point                   0.761894 8.50781
+                control_point                   0.985318 13.9219
+            }
+        }
+        affector                                Colour Affector1
+        {
+            time_colour                         0    1 0.945098 0.909804 0.0117647
+            time_colour                         0.402174  1 0.588235 0.482353 0.529412
+            time_colour                         0.752174  0.992157 0.937255 0.843137 0.211765
+            time_colour                         0.936957  0.996078 0.94902 0.913725 0.0784314
+            time_colour                         1    1 1 1 0
+        }
+        affector                                SineForce Affector6
+        {
+            position                            1 0 0
+            mass_affector                       1e+016
+            force_vector                        8 0 8
+            min_frequency                       2
+            max_frequency                       500
+        }
+        affector                                TextureRotator Affector5
+        {
+            rotation                            dyn_random
+            {
+                min                             -5
+                max                             7
+            }
+            rotation_speed                      dyn_random
+            {
+                min                             0.5
+                max                             2
+            }
+        }
+        affector                                Vortex Affector3
+        {
+            enabled                             false
+            rotation_axis                       0 1 0
+            rotation_speed                      0.1
+        }
+    }
+}
